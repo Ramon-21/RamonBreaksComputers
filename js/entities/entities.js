@@ -34,7 +34,7 @@ game.PlayerEntity = me.Entity.extend({
     },
     
     setAttributes: function(){
-        //sets the health and attack that was loaded in game.js
+        //sets the health and attack that was loaded in the game 
         this.health = game.data.playerHealth;
         this.body.setVelocity(game.data.playerMoveSpeed, 20);
         this.attack = game.data.playerAttack;
