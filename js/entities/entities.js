@@ -109,6 +109,7 @@ game.PlayerEntity = me.Entity.extend({
         this.flipX(true);
     },
     
+    //jump ability
     jump: function(){
         //sets the charater to be able to jump
         this.body.jumping = true;
@@ -127,7 +128,7 @@ game.PlayerEntity = me.Entity.extend({
     },
     
     throwSpear: function(){
-        //checks the timer to throw the spear
+        //throwing spear ability 
         if(this.now-this.lastSpear >= game.data.spearTimer && game.data.ability3 >= 0){
             this.lastSpear = this.now;
             var spear = me.pool.pull("spear", this.pos.x, this.pos.y, {}, this.facing);
@@ -136,7 +137,7 @@ game.PlayerEntity = me.Entity.extend({
     },
     
     setAnimation: function(){
-        //sets the animation based on the keys pressed
+        //sets the animation depending on wicjh key is pressed 
         if(this.attacking){
             if(!this.renderable.isCurrentAnimation("attack")){
                 this.renderable.setCurrentAnimation("attack", "idle");
